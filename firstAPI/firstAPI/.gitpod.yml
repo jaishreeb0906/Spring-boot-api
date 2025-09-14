@@ -4,8 +4,6 @@ tasks:
       sudo apt install -y openjdk-21-jdk
       echo 'export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64' >> ~/.bashrc
       echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
-      source ~/.bashrc
+      export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+      export PATH=$JAVA_HOME/bin:$PATH
     command: ./mvnw spring-boot:run
-ports:
-  - port: 8080
-    onOpen: open-browser
